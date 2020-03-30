@@ -18,6 +18,7 @@ const BookLI = ({ name, image, catagory, updateBook, bookId ,author }) => (
     </li>
 )
 
+
 //**************************************************************
 BookLI.propTypes = {
     name : PropTypes.string.isRequired,

@@ -11,7 +11,7 @@ const Booksection = ({ name , books ,  updateBook}) => (
     <div className="bookshelf-books">
       <ol className="books-grid">
         {books.map((book)=>(
-        <BookLI name= {book.title} 
+        <BookLI name= { book.hasOwnProperty('title') ? book.title : null} 
         author={book.hasOwnProperty('authors') ? book.authors[0] : null }
         image={book.hasOwnProperty('imageLinks')  && book.imageLinks.hasOwnProperty( 'smallThumbnail') ? book.imageLinks.smallThumbnail : null}
         catagory ={book.shelf}

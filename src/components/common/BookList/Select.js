@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 //**************************************************************
 const Select = ({ catagory  , updateBook , bookId}) => (
     <div className="book-shelf-changer">
-        <select value={catagory} onChange={async (event)=> await updateBook(bookId , event.target.value)}>
+        <select value={catagory ? catagory : "none" } onChange={async (event)=> await updateBook(bookId , event.target.value)}>
             <option value="move" disabled>Move to...</option>
             <option value="currentlyReading">Currently Reading</option>
             <option value="wantToRead">Want to Read</option>

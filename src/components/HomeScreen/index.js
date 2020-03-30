@@ -18,8 +18,8 @@ class SearchPage extends React.Component {
         }
     }
 
-    async componentDidMount() {
-        await this.getAllBooks()
+    componentDidMount() {
+        this.getAllBooks()
       }
     
       getAllBooks = async () => {
@@ -64,7 +64,6 @@ class SearchPage extends React.Component {
     }
     render() {
         const { currentlyReading, read, wantToRead } = this.state
-        console.log(currentlyReading)
         return (
             <div className="list-books">
                 <Header />

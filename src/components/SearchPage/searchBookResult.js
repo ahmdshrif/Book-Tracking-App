@@ -11,7 +11,6 @@ const searchBooksResults = ({ books , updateBook }) => (
     </div>
 )
 
-
 //**************************************************************
 searchBooksResults.PropTypes = {
     books : PropTypes.arrayOf(PropTypes.object).isRequired , 

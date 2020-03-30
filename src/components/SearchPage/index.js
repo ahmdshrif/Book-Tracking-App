@@ -34,7 +34,8 @@ export default class SearchPage extends React.Component {
         try {
 
             let searchResult = await BooksAPI.search(query);
-            this.setState({ searchResult })
+            console.log(searchResult)
+            this.setState({ searchResult :  searchResult.error ? null : searchResult })
 
         } catch (error) {
             console.warn("error on get search result  {API error} \n " + error)
